@@ -1,0 +1,67 @@
+<div id="countaneirEsterno">
+    <div>
+        <div class="celle" (click)="change(1)">
+            <div class="color" [style.background-color]="Color1">
+
+            </div>
+            <div class="row scritto">
+                <div class="col-3 d-flex align-items-center">
+                    <img src="../assets/file-earmark-text.svg" alt="icona" height="15rem">
+                </div>
+                <div class="col-9 d-flex align-items-center" style="padding: 0;">
+                    Informazioni Aziendale
+                </div>
+            </div>
+        </div>
+
+
+        <div class="celle" (click)="change(2)">
+            <div class="color" [style.background-color]="Color2">
+
+            </div>
+            <div class="row scritto">
+                <div class="col-3 d-flex align-items-center">
+                    <img src="../assets/file-earmark-text.svg" alt="icona" height="15rem">
+                </div>
+                <div class="col-9 d-flex align-items-center " style="padding: 0;">
+                    Stagisti ed Ex-Stagisti
+                </div>
+            </div>
+        </div>
+
+
+        <div class="celle" (click)="change(3)">
+            <div class="color" [style.background-color]="Color3">
+
+            </div>
+            <div class="row scritto">
+                <div class="col-3 d-flex align-items-center">
+                    <img src="../assets/file-earmark-text.svg" alt="icona" height="15rem">
+                </div>
+                <div class="col-9 d-flex align-items-center " style="padding: 0;">
+                    Notifiche
+                </div>
+            </div>
+        </div>
+
+
+        <div class="celle" (click)="change(4)">
+            <div class="color" [style.background-color]="Color4">
+
+            </div>
+            <div class="row scritto">
+                <div class="col-3 d-flex align-items-center">
+                    <img src="../assets/file-earmark-text.svg" alt="icona" height="">
+                </div>
+                <div class="col-9 d-flex align-items-center " style="padding: 0;">
+                    Richieste
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button class="btn btnLog" (click)="logOut()">
+            logout
+        </button>
+    </div>
+</div>

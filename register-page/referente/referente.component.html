@@ -1,0 +1,64 @@
+<app-navbar></app-navbar>
+<div class="row">
+  <div class="col" style="margin-left: 30%;">
+    <img style=" width: 100%;margin-bottom: 15%; margin-top: 20%;" src="../../../../assets/login.PNG">
+  </div>
+  <div class="col1">
+    <div class="container" style="width: 70%;">
+      <form class="form" #f="ngForm" (ngSubmit)="f.form.valid && change()">
+
+        <h2>Referente</h2>
+        <div class="row1">
+          <label class="col-12" for="exampleInputNome" class="form-label">Nome* </label>
+          <input type="text" [(ngModel)]="nome" [ngModelOptions]="{standalone: true}" placeholder="Es. Mario"#name="ngModel"
+            class="form-control" name="name" id="name" value="" required >
+          <div style="color: red;" *ngIf="name.invalid">
+            <div *ngIf="name.errors.required">
+              Campo obbligatorio.
+            </div>
+          </div>
+        </div>
+        <div class="row1">
+          <label class="col-12" for="exampleInputCognome" class="form-label">Cognome*</label>
+          <input [(ngModel)]="cognome" [ngModelOptions]="{standalone:true}" class="col-12" type="text"
+            class="form-control" id="exampleInputCognome" #surname="ngModel" placeholder="Es. Verdi"name="surname" id="surname" value="" required>
+            <div style="color: red;" *ngIf="surname.invalid">
+              <div *ngIf="surname.errors.required">
+                Campo obbligatorio.
+              </div>
+            </div>
+        </div>
+        <div class="row1">
+          <label class="col-12" for="exampleInputTelefono" class="form-label">Numero di telefono*</label>
+          <input [(ngModel)]="tel" [ngModelOptions]="{standalone:true}" class="col-12" placeholder="Es. 0432 657896"type="tel" #tell="ngModel" name="tel" id="email" value=""
+          class="form-control"  required>
+          <div style="color: red;" *ngIf="tel.invalid">
+            <div *ngIf="email.errors.required">
+              Campo obbligatorio.
+            </div>
+          </div>
+            
+        </div>
+        <div class="row1">
+          <label class="col-12" for="exampleInputEmail" class="form-label">Email Aziendale*</label>
+          <input [(ngModel)]="email1" [ngModelOptions]="{standalone:true}" class="col-12" placeholder="Es. Techly@gmail.com"type="email"#email="ngModel" name="email" id="email" value=""
+            class="form-control" id="exampleInputEmail" required>
+            <div style="color: red;" *ngIf="email.invalid">
+              <div *ngIf="email.errors.required">
+                Campo obbligatorio.
+              </div>
+            </div>
+        </div>
+        <div class="row1">
+
+          <button class="button" [routerLink]="['/register/access']">Prev</button>
+
+          <button class="button2" type="submit" >Next</button>
+
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+</div>

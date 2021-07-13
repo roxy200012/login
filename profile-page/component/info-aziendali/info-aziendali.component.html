@@ -1,0 +1,97 @@
+<div>
+    <div style="display: flex; flex-wrap: wrap;"> 
+        <div class="terzo" >
+            <h1>Informazioni</h1>
+            <div>
+                <h2>Nome azienda</h2>
+                <div class="check input-group mb-3">
+                    <input type="text" class="form-control" [(ngModel)]="datiAzienda.nome_azienda" [disabled]="ifDisableDati" aria-label="Username">
+                </div>
+            </div>
+            <div>
+                <h2>Ragione Sociale</h2>
+                <div class="check input-group mb-3">
+                    <input type="text" class="form-control" [(ngModel)]="datiAzienda.ragione_sociale" [disabled]="ifDisableDati" aria-label="Username">
+                </div>
+            </div>
+            <div>
+                <h2>Partita IVA</h2>
+                <div class="check input-group mb-3">
+                    <input type="text" class="form-control" [(ngModel)]="datiAzienda.partita_iva" [disabled]="ifDisableDati" aria-label="Username">
+                </div>
+            </div>
+            <div>
+                <h2>Referente</h2>
+                <div class="check input-group mb-3">
+                    <input type="text" class="form-control" [(ngModel)]="datiAzienda.referente" [disabled]="ifDisableDati" aria-label="Username">
+                </div>
+            </div>
+            <div>
+                <h2>Sede</h2>
+                <div class="check input-group mb-3">
+                    <input type="text" class="form-control" [(ngModel)]="datiAzienda.sede" [disabled]="ifDisableDati" aria-label="Username">
+                </div>
+            </div>
+        </div>
+    
+        <div class="terzo">
+            <h1>Contatti</h1>
+            <div>
+                <h2>Telefono</h2>
+                <div class="check input-group mb-3">
+                    <input type="text" class="form-control" [(ngModel)]="datiAzienda.telefono" [disabled]="ifDisableDati" aria-label="Username">
+                </div>
+            </div>
+            <div>
+                <h2>E-mail</h2>
+                <div class="check input-group mb-3">
+                    <input type="text" class="form-control" [(ngModel)]="datiAzienda.mail" [disabled]="ifDisableDati" aria-label="Username">
+                </div>
+            </div>
+            <div>
+                <h2>LinkedIn</h2>
+                <div class="check input-group mb-3">
+                    <input type="text" class="form-control" [(ngModel)]="datiAzienda.linkedin" [disabled]="ifDisableDati" aria-label="Username">
+                </div>
+            </div>
+            <div>
+                <h2>Sito</h2>
+                <div class="check input-group mb-3">
+                    <input type="text" class="form-control" [(ngModel)]="datiAzienda.sito" [disabled]="ifDisableDati" aria-label="Username">
+                </div>
+            </div>
+            <div>
+                <button (click)="isDisableDati()" style="margin-top: 7vh;"><b><span id="Datibtn">Modifica Dati</span></b><img src="../assets/pen-solid.svg" alt="icona" height="15px"></button>
+            </div>
+        </div>
+    
+        <div class="terzo">
+            <img class="round" src="../assets/Azienda.jpeg" alt="immagine profile" style="margin-bottom: 30px;">
+            <h1>Credenziali</h1>
+            <div>
+                <h2>E-mail</h2>
+                <div class="check input-group mb-3">
+                    <input type="text" class="form-control" [(ngModel)]="datiAzienda.mail" [disabled]="ifDisableCre" aria-label="Username">
+                </div>
+            </div>
+            <div>
+                <h2>Password</h2>
+                <div class="check input-group mb-3">
+                    <input type="text" class="form-control" [(ngModel)]="datiAzienda.password" [disabled]="ifDisableCre" aria-label="Username">
+                </div>
+            </div>
+            <div>
+                <button (click)="isDisableCre()" style="margin-top: 7vh;"><b><span id="Crebtn">Modifica Credenziali</span></b><img src="../assets/pen-solid.svg" alt="icona" height="15px"></button>
+            </div>
+        </div>
+    <div>
+</div>
+
+<div style="width: 120%;">
+    <h2>Descrizione Azienda</h2>
+    <div class="check input-group mb-3" style="width: 50%;">
+        <input type="text" class="form-control" aria-label="Username" >
+    </div>
+</div>
+    
+    

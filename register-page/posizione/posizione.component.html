@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+<div class="row">
+    <div class="col" style="margin-left: 30%;">
+      <img style=" width: 100%;height:50%;margin-bottom: 15%; margin-top: 20%;"src="../../../../assets/login.PNG">
+    </div>
+    <div class="col1">
+      <div class="container" style="width: 50%;">
+        <form class="form">
+          <h2>Posizione azienda</h2>
+          <div class="row1">
+  
+            <label class="col-12" for="exampleInputEmail1" class="form-label">Città*</label>
+            <input [(ngModel)]="luogo" [ngModelOptions]="{standalone:true}" placeholder="Es. Pordenone" class="col-12" type="text"  #city="ngModel"
+            class="form-control" city="city" id="city" value="" required>
+            <div style="color: red;" *ngIf="city.invalid">
+              <div *ngIf="city.errors.required">
+                Campo obbligatorio.
+              </div>
+            </div>
+  
+          </div>
+          <div class="row1">
+            <label class="col-12" for="exampleInputPassword1" class="form-label">CAP*</label>
+            <input [(ngModel)]="cap" [ngModelOptions]="{standalone:true}"class="col-12" placeholder="Es. 33090" type="text"  #cap1="ngModel"
+            class="form-control" cap1="cap1" id="cap1" value="" required>
+            <div style="color: red;" *ngIf="cap1.invalid">
+              <div *ngIf="cap1.errors.required">
+                Campo obbligatorio.
+              </div>
+            </div>
+          </div>
+          <div class="row1">
+            <label class="col-12" for="exampleInputPassword1" class="form-label">Via*</label>
+            <input [(ngModel)]="via" [ngModelOptions]="{standalone:true}"class="col-12" placeholder="via martino,23" type="text" #via1="ngModel"
+            class="form-control" via1="via1" id="via1" value="" required>
+            <div style="color: red;" *ngIf="via1.invalid">
+              <div *ngIf="via1.errors.required">
+                Campo obbligatorio.
+              </div>
+            </div>
+          </div>
+          <div class="row1">
+        
+              <button class="button" [routerLink]="['/register/azienda']">Prev</button>
+            
+              <button class="button2" (click)="change()">Next</button>
+            
+          </div>
+  
+        </form>
+      </div>
+    </div>

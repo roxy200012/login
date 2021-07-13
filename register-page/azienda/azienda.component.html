@@ -1,0 +1,61 @@
+<app-navbar></app-navbar>
+
+<div class="row">
+  <div class="col" style="margin-left: 30%;">
+    <img style=" width: 100%;margin-bottom: 15%; margin-top: 20%;" src="../../../../assets/login.PNG">
+  </div>
+  <div class="col1">
+    <div class="container" style="width: 70%;">
+      <form class="form" #f="ngForm" (ngSubmit)="f.form.valid && change()">
+
+        <h2>Azienda</h2>
+        <div class="row" style="background-color: #FAFAFA;">
+          <div class="col-6">
+            <label for="exampleInputEmail1" class="form-label">Nome Azienda*</label>
+            <input [(ngModel)]="azienda" [ngModelOptions]="{standalone:true}" type="email" class="form-control"
+              id="exampleInputEmail1" placeholder="Es. Techly" #name_azienda="ngModel" class="form-control"
+              name_azienda="nome_azienda" id="nome_azienda" value="" required>
+            <div style="color: red;" *ngIf="name_azienda.invalid">
+              <div *ngIf="name_azienda.errors.required">
+                Campo obbligatorio.
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <label for="exampleInputEmail1" class="form-label">Ragione Sociale*</label>
+            <input [(ngModel)]="r_sociale" [ngModelOptions]="{standalone:true}" placeholder="Es. Techly srl"
+              type="email" #name_azienda="ngModel" class="form-control" name_azienda="nome_azienda" id="nome_azienda"
+              value="" required />
+            <div style="color: red;" *ngIf="name_azienda.invalid">
+              <div *ngIf="name_azienda.errors.required">
+                Campo obbligatorio.
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">P. IVA*</label>
+          <input [(ngModel)]="iva" [ngModelOptions]="{standalone:true}" type="text" placeholder="IT0123456789"
+            #iva1="ngModel" class="form-control" iva1="iva1" id="iva1" value="" required />
+          <div style="color: red;" *ngIf="iva1.invalid">
+            <div *ngIf="iva1.errors.required">
+              Campo obbligatorio.
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="row" style="background-color: #FAFAFA;">Logo</label>
+          <input [(ngModel)]="logo" [ngModelOptions]="{standalone:true}" type="file" />
+        </div>
+
+        <div class="row1">
+          <button class="button" [routerLink]="['/register/referente']">Prev</button>
+          <button class="button2" type="submit">Next</button>
+
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>

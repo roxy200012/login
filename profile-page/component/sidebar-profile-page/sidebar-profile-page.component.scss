@@ -1,0 +1,43 @@
+*{
+    font-size: 14px;
+    text-align: center;
+}
+
+img{
+    margin-left: 30%;
+}
+
+#countaneirEsterno{
+    margin-left: 3rem;
+}
+
+.celle{
+    width: 80%;
+    height: 3rem;
+    background-color: #FAFAFA;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 1rem;
+    cursor: pointer;
+    display: flex;
+}
+
+.color{
+    width:5%;
+    height: 100%;
+
+}
+
+.scritto{
+    width:100%
+}
+
+.btnLog{
+    display: flex;
+    background-color: #e20613;
+    color: white;
+    width: 40%;
+    height: fit-content;
+    margin-top: 4vh;
+    justify-content: center;
+}

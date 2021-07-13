@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+<div class="row">
+  <div class="col" style="margin-left: 30%;">
+    <img style=" width: 100%;margin-bottom: 15%; margin-top: 20%;"src="../../../../assets/login.PNG">
+  </div>
+  <div class="col1">
+    <div class="container" style="width: 70%;">
+      <form class="form" #f="ngForm" (ngSubmit)="f.form.valid && change()">
+        <h2>Registrazione</h2>
+        <div class="row1">
+
+          <label class="col-12" for="exampleInputEmail" class="form-label">Email Aziendale *</label>
+          <input [(ngModel)]="email" #email1="ngModel"name="email1" id="email1" value="" placeholder="Es. Techly@gmail.com"required [ngModelOptions]="{standalone:true}" class="col-12" type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp"/>
+          <div style="color: red;" *ngIf="email1.invalid">
+            <div *ngIf="email1.errors.required">
+              Campo obbligatorio.
+            </div>
+          
+          </div>
+        </div>
+        <div class="row1">
+          <label class="col-12" for="exampleInputPassword" class="form-label">Password*</label>
+          <input [(ngModel)]="password" #password1="ngModel"name="password1" id="password1" placeholder="Es. 123456" [ngModelOptions]="{standalone:true}" class="col-12" type="password" class="form-control " required/>
+          <div style="color: red;" *ngIf="password1.invalid">
+            <div *ngIf="password1.errors.required">
+              Campo obbligatorio.
+            </div>
+          </div>
+        </div>
+        <div class="row1">
+          <label class="col-12" for="exampleInputPassword2" class="form-label">Conferma Password*</label>
+          <input [(ngModel)]="password3" #password2="ngModel"name="password2" id="password2" placeholder="Es. 123456" [ngModelOptions]="{standalone:true}" class="col-12" type="password" class="form-control " id="exampleInputPassword" required/>
+          <div style="color: red;" *ngIf="password2.invalid">
+            <div *ngIf=" password2.errors.required">
+              Campo obbligatorio
+              
+            </div>
+            
+          </div>
+        </div>
+        <div class="row1">
+          
+            <button class="button" [routerLink]="['/register']">Prev</button>
+       
+            <button class="button2"type="submit" >Next</button>
+          
+        </div>
+
+      </form>
+    </div>
+  </div>
